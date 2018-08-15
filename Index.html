@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Work with Js</title>
+    <meta charset="utf-8" />
+    <link href="./css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="leftnav">
+            <nav>
+                <div>
+                    <ul type="none" class="Tfigures" id="Tfigures">
+                        <li>
+                            <img class="cursorImg Img Type" type="Cursor" src="./images/cursor.png" />
+                        </li>
+                        <li>
+                            <img class="rectangleImg Img Type" type="Rectangle" src="./images/rectangle.png" />
+                        </li>
+                        <li>
+                            <img class="ellipseImg Img Type" type="Ellipse" src="./images/ellipse.png" />
+                        </li>
+                        <li>
+                            <img class="lineImg Img Type" type="Line" src="./images/line.png" />
+                        </li>
+                    </ul>
+                    <button id="Btn-clear">Clear</button>
+                </div>
+            </nav>
+            <div class="CurColor" style="margin-top:10px;">
+                <div>
+                    <span class="header-for-color">Paint Color</span>
+                </div>
+                <div class="colorContainer">
+                    <label for="curColor">Border:</label>
+                    <input type="text" name="curColor" id="curColor" />
+                </div>
+                <div class="fillColorContainer">
+                    <label for="BackgoundFigure">Background:</label>
+                    <input type="text" name="BackgoundFigure" id="BackgoundFigure" />
+                </div>
+            </div>
+            <div class="ChangeColor" style="margin-top:10px;">
+                <div>
+                    <span class="header-for-color">Color for selected figure</span>
+                </div>
+                <div class="colorContainer">
+                    <label for="changeColorBorder">Border:</label>
+                    <input type="text" name="changeColorBorder" id="changeColorBorder" />
+                    <button id="Btn-changeborder">Change</button>
+                </div>
+                <div class="fillColorContainer">
+                    <label for="changeBackgroundColor">Background:</label>
+                    <input type="text" name="changeBackgroundColor" id="changeBackgroundColor" />
+                    <button id="Btn-changebackground">Change</button>
+                </div>
+            </div>
+        </div>
+        <section class="mainContent">
+            <div class="canvas">
+                <canvas id="canvas"></canvas>
+            </div>
+
+        </section>
+        <section class="textareaSection">
+            <div>
+                <button id="Btn-save">to JSON</button>
+                <button id="Btn-load">from JSON</button>
+            </div>
+            <div>
+                <textarea id="Js-textarea" placeholder="You saves"></textarea>
+            </div>
+        </section>
+    </section>
+
+    <script src="./js/GlobalObject.js"></script>
+    <script src="./js/model/point.js"></script>
+    <script src="./js/model/shape.js"></script>
+    <script src="./js/model/ellipse.js"></script>
+    <script src="./js/model/line.js"></script>
+    <script src="./js/model/rectangle.js"></script>
+    <script src="./js/view/main.js"></script>
+    <script src="./js/controller/mainController.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
